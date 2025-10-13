@@ -19,7 +19,7 @@ export default async function Page({ params }: Props) {
                 <Link href={'/'}>Home</Link> &gt; <Link href={'/'}>Temporário</Link> &gt; {data.product.label}
             </div>
 
-            <div className="flex flex-col md:flex-row gap-6 md:gap-32">
+            <div className="flex flex-col md:flex-row gap-6 lg:gap-30 md:gap-6">
                 <ImageSlider images={data.product.images} />
                 <ProductDetails product={data.product} />
             </div>

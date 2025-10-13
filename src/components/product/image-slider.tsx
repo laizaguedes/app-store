@@ -11,7 +11,7 @@ export const ImageSlider = ({ images }: Props) => {
     const [activeImage, setActiveImage] = useState(0);
 
     return (
-        <div className="max-h-sm mx-auto md:mx-0">
+        <div className="max-h-sm mx-auto md:mx-0 flex-1">
             <div className="border border-gray-300 bg-white p-14">
                 <Image
                     src={images[activeImage]}
