@@ -3,7 +3,7 @@
 import { getServerCart } from "@/libs/server.-cookies";
 
 // Pegar o carinho de compras
-export const getCartStatte = async () => {
+export const getCartState = async () => {
     const cart = await getServerCart();
     return { cart };
 }

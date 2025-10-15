@@ -1,3 +1,5 @@
+"use server"//executada no servidor
+
 import { setServerCart } from "@/libs/server.-cookies";
 import { CartItem } from "@/types/cart-item";
 

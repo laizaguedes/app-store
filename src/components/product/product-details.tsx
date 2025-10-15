@@ -1,14 +1,22 @@
 "use client"
+import { setCartState } from "@/actions/set-cart-state";
+import { useCartStore } from "@/store/cart";
 import { ProductComplete } from "@/types/product"
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 type Props = {
     product: ProductComplete;
 }
 
 export const ProductDetails = ({ product }: Props) => {
+    const cartStore = useCartStore(state => state);
+
     const addToCart = async () => {
-        // TODO: implementar adicionar ao carrinho
+        cartStore.addItem({ productId: product.id, quantity: 1 });
+        const updatedCart = useCartStore.getState().cart;
+        await setCartState(updatedCart);
+        redirect('/cart');
     }
 
     return (
@@ -17,6 +25,7 @@ export const ProductDetails = ({ product }: Props) => {
             <div className="font-bold text-3xl mb-6">{product.label}</div>
             <div className="font-bold text-4xl text-blue-700 mb-2">R$ {product.price.toFixed(2)}</div>
             <div className="text-sm text-gray-500 mb-6">Em até 12x de R$ {(product.price / 12).toFixed(2)}</div>
+            <div>CARRINHO: {cartStore.cart.length}</div>
             <div className="flex gap-4">
                 <button
                     onClick={addToCart}
