@@ -32,7 +32,7 @@ export const CartContainer = ({ initialCartProducts, initialSubtotal }: Props) =
                     <span className="text-gray-500"> ({ cartStore.cart.length } {cartStore.cart.length > 1 ? 'itens' : 'item'})</span>
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row gap-8">
+            <div className="flex flex-col md:flex-row gap-8 mt-9">
                 <div className="flex-1">
                     <CartProductList initialList={initialCartProducts} />
                 </div>

@@ -7,7 +7,7 @@ type Props = {
 
 export const CartProductList = ({ initialList }: Props) => {
     return (
-        <div>
+        <div className="bg-white border md:border-b-0 border-gray-200">
             {initialList.map(item => (
                 <CartProductItem
                     key={item.product.id}

@@ -20,7 +20,7 @@ export default async function Page() {
     const products = await getProductsFromList(ids);
 
     initialCart.forEach(cartItem => {
-        let productIndex = products.findIndex(item => item.id === cartItem.id);
+        let productIndex = products.findIndex(item => item.id === cartItem.productId);
         if (productIndex > -1) {
             cartProducts.push({
                 product: products[productIndex],
