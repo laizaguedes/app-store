@@ -25,5 +25,10 @@ export const data = {
             '/assets/products/camiseta-laravel-branca.png',
             '/assets/products/camiseta-react-azul.png',
         ]
-    }
+    },
+    addresses: [
+        { id: 1, zipCode: '12345-678', street: 'Rua A', number: '123', city: 'Cidade A', state: 'Estado A', country: 'País A', complement: 'Complemento A' },
+        { id: 2, zipCode: '98765-432', street: 'Rua B', number: '456', city: 'Cidade B', state: 'Estado B', country: 'País B', complement: 'Complemento B' },
+        { id: 3, zipCode: '54321-876', street: 'Rua C', number: '789', city: 'Cidade C', state: 'Estado C', country: 'País C', complement: 'Complemento C' },
+    ]
 }
